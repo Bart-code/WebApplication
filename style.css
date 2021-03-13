@@ -15,8 +15,8 @@ body
 	margin-right: auto;
 	background-color:#30B2C7;
 	padding-left: 80px;
-	padding-top: 80px;
-	margin-top: 80px;
+	padding-top: 50px;
+	margin-top: 50px;
 	border-radius: 40px;
 	text-align: left;
 	border: 2px solid #20A2B7;
@@ -27,6 +27,7 @@ body
 h1
 {
 	font-size: 60px;
+	margin: 5px;
 }
 
 h2
@@ -34,13 +35,13 @@ h2
 	font-size: 30px;
 	font-weight: 200;
 	font-style: italic;
+	margin: 5px;
 }
 
 label
 {
 	height: 60px;
 	display:block;
-	
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
@@ -81,10 +82,17 @@ a
 	cursor: pointer;
 }
 
-.container2
+.containerBigger
 {
 	width:1200px;
-	
+}
+
+.formContainer
+{
+	width: 800px;
+	margin-top: 20px;
+	padding-top: 20px;
+	height: auto;
 }
 
 .Button2
@@ -109,4 +117,32 @@ a
 .Button2:hover
 {
 	background-color: #2AA8B2;
+}
+
+.formField
+{
+	padding: 5px;
+}
+
+select
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+#Item
+{
+	padding: 0px;
+	margin: 0px;
+	color: #1092A7;
+	width: 225px;
+	border: 2px solid #222;
+	height: 35px;
+} 
+
+textarea
+{
+	min-height: 110px;
+	min-width: 250px;
+	border: 2px solid #222;
 }
