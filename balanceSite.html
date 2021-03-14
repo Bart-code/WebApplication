@@ -19,11 +19,20 @@
 		<h1 > Cash Assistant </h1>
 	</header>
 	<div class="container" >
-		<div style="text-align: center;"> 
-			Time borders: 
 			<div>
+				<div class="formField" >
+					<label>
+						Time borders: <br/>
+						<select class="textField">
+							<option> Current month </option>
+							<option> Previos month</option>
+							<option> Current year </option>
+							<option> Custom </option>
+						</select>
+					</label>
+				</div>
 				<div class="balanceSheetField">
-					<label> Down border: <br/> <input type="date" class="textField" id="dateField" />  </label>
+					Down border: <br/> <input type="date" class="textField" id="dateField" /> 
 				</div>
 				<div class="balanceSheetField" >
 					<label> Top border: <br/> <input type="date" class="textField" id="dateField" />  </label>
@@ -34,7 +43,6 @@
 					</button>
 				</div>
 			</div>
-		</div> 
 		<div id="balanceSheet">
 			Balance sheet: 
 			<div id="balanceSheetTextField">
