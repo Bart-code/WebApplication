@@ -19,32 +19,35 @@
 		<h1 > Cash Assistant </h1>
 	</header>
 	<div class="container" >
-		<form>
-			<div style="text-align: center;"> 
-				Time borders: 
-				<div>
-					<div class="balanceSheetField">
-						<label> Down border: <br/> <input type="date" class="textField" id="dateField" />  </label>
-					</div>
-					<div class="balanceSheetField" >
-						<label> Top border: <br/> <input type="date" class="textField" id="dateField" />  </label>
-					</div>
+		<div style="text-align: center;"> 
+			Time borders: 
+			<div>
+				<div class="balanceSheetField">
+					<label> Down border: <br/> <input type="date" class="textField" id="dateField" />  </label>
 				</div>
-			</div> 
-			</form>
-			<div style=" margin-top: 30px; display:inline-block;"> <a href="mainSite.html"> 
+				<div class="balanceSheetField" >
+					<label> Top border: <br/> <input type="date" class="textField" id="dateField" />  </label>
+				</div>
+				<div class="balanceSheetField" >
+					<button type="button" class= "Button2" >
+						 Show balance
+					</button>
+				</div>
+			</div>
+		</div> 
+		<div>
+			Balance sheet: 
+			<div id="balanceSheetTextField">
+				
+			</div>
+		</div>
+		<div>
+			<a href="mainSite.html">
 				<button type="button" class= "Button2" >
 					<i class="icon-left-big"></i> Back
 				</button>
-			</a> </div>
-			<div  style=" margin: 30px; display:inline-block; position: absolute; left: 60%;"> 
-				<a href="mainSite.html"> 
-				<button type="button" class= "Button2" >
-					 Add income
-				</button>
-			</a> </div>
-			
-		
+			</a>
+		</div>
 	</div>
 
 </body>
