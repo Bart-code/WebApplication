@@ -165,6 +165,7 @@ textarea
 	margin-right: auto;
 	font-size: 24px;
 	color: white;
+	margin-bottom: 30px;
 }
 
 #balanceSheetTextField
@@ -177,3 +178,7 @@ textarea
 	border-radius: 10px;
 }
 
+#summaryField
+{
+	font-size: 18px;
+}
