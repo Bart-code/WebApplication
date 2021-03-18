@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Cash Assistant</title>
+	<meta name="description" content="Zapanuj nad finansami" />
+	<meta name="keywords" content="finanse, pieniądze, budżet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+	
+	
+</head>
+
+<body>
+	<header>
+		<h1 > Cash Assistant </h1>
+	</header>
+	<div class="container  formContainer" >
+		<form>
+			<div  style="display:inline-block;"> 
+				Expenses: <br/>
+				<span style="font-size:14px;"> (poniżej wyświetli sie lista wydatków - po wybraniu któregoś zostaną wczytane dane do poniższych okienek ) <br/>
+				</span>
+				<div class="formField" >
+					<select  size="6" id="editList">
+						<option> Clothes 21-02-2021 </option>
+						<option> Food sale 10-03-2021</option>
+						<option> Transport 01-01-2020</option>
+						<option> Trip 30-01-2021</option>
+					</select>
+				</div>
+			</div>
+			<input type="button" class= "Button" value="Delete" />
+			<div  style="display:inline-block; font-size:16px;" > 
+				<div class="formField" style="padding-top:0px; padding-bottom:0px;"> 
+					<label> Amount: <br/> <input type="number" class="textField" /> zł </label>
+				</div>
+				<div class="formField" style="padding-top:0px; padding-bottom:0px;">
+					<label> Date: <br/> <input type="date" class="textField" id="dateField" />  </label>
+				</div>
+				<div class="formField" style="padding-top:0px; padding-bottom:0px;">
+					<label>
+						Item: <br/>
+						<select id="Item" class="textField">
+							<option> Graduate </option>
+							<option> Bank</option>
+							<option> Allegro sale </option>
+							<option> Other </option>
+						</select>
+					</label>
+				</div>
+				<div class="formField" style="padding-top:0px; padding-bottom:0px;">
+					<label>
+						Payment type: <br/>
+						<select id="Item" class="textField">
+							<option> Cash </option>
+							<option> Debit card</option>
+							<option> Credit card</option>
+						</select>
+					</label>
+				</div>
+			</div> 
+			<div class="formField" 
+				style="display:inline-block; vertical-align: top; margin-left: 100px; font-size:16px;">
+				<label> Comment: <br/> <textarea type="text" class="textField" > </textarea> </label>
+			</div>
+		</form>
+		<div style=" margin-top: 30px; display:inline-block;">
+				<input type="button" class= "Button" value="Save changes" />
+			<a href="settingsSite.html"> 
+				<button type="button" class= "Button2" >
+					<i class="icon-left-big"></i> Back
+				</button>
+			</a> 
+		</div>
+			
+		
+	</div>
+
+</body>
+</html>
