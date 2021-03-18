@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Cash Assistant</title>
+	<meta name="description" content="Zapanuj nad finansami" />
+	<meta name="keywords" content="finanse, pieniądze, budżet" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+	
+	<script>
+		function changeIncomesButton()
+		{	
+			var categoryOption = document.getElementById("incomesCategory").value;
+			if( categoryOption == "New" )
+			{
+				document.getElementById("incomesButton").value = "Add category";
+			}
+			else
+				document.getElementById("incomesButton").value = "Delete category";
+		}
+		
+		function changeExpensesButton()
+		{	
+			var categoryOption = document.getElementById("expensesCategory").value;
+			if( categoryOption == "New" )
+			{
+				document.getElementById("expensesButton").value = "Add category";
+			}
+			else
+				document.getElementById("expensesButton").value = "Delete category";
+		}
+		
+		function changePaymentButton()
+		{	
+			var categoryOption = document.getElementById("paymentMethodSelector").value;
+			if( categoryOption == "New" )
+			{
+				document.getElementById("paymentButton").value = "Add method";
+			}
+			else
+				document.getElementById("paymentButton").value = "Delete method";
+		}
+	</script>
+	
+</head>
+
+<body>
+	<header>
+		<h1 > Cash Assistant </h1>
+	</header>
+	<div class="container formContainer" >
+		<form style="font-size: 24px;">
+			<div style="display: inline-block; margin-left:0px; margin-right:80px;">
+				<div class="formField">
+					<label style="margin-top:0px; margin-bottom:opx;">
+						Incomes category: <br/>
+						<select id="incomesCategory" class="textField" onchange="changeIncomesButton()">
+							<option> Category 1 </option>
+							<option> Category 2 </option>
+							<option> Category 3 </option>
+							<option> Category 4 </option> 
+							<option> New </option>
+						</select>
+					</label>
+				</div>
+				<div class="formField" >
+					<label style="margin-top:0px; margin-bottom:opx;">
+						Category name: </br> <input type="text" class="textField">
+					</label>
+				</div>
+				<input type="button" class= "Button2" id="incomesButton" value="Delete category" />
+			</div>
+			
+			<div style="display: inline-block; margin-left:50px; margin-right:50px;">
+				<div class="formField">
+					<label style="margin-top:0px; margin-bottom:opx;">
+						Expenses category: <br/>
+						<select id="expensesCategory" class="textField" onchange="changeExpensesButton()">
+							<option> Category 1 </option>
+							<option> Category 2 </option>
+							<option> Category 3 </option>
+							<option> Category 4 </option> 
+							<option> New </option>
+						</select>
+					</label>
+				</div>
+				<div class="formField" >
+					<label style="margin-top:0px; margin-bottom:opx;">
+						Category name: </br> <input type="text" class="textField">
+					</label>
+				</div>
+				<input type="button" class= "Button2" id="expensesButton" value="Delete category" />
+			</div>
+			
+			<div  style="display:block;"> 
+				<div class="formField" >
+					<label style="margin-top:40px; margin-bottom:opx;">
+						Payment method: <br/>
+						<select id="paymentMethodSelector" class="textField" onchange="changePaymentButton()">
+							<option> Cash </option>
+							<option> Credit card </option>
+							<option> Debit card </option>
+							<option> New </option>
+						</select>
+					</label>
+				</div>
+				<div class="formField" >
+					<label style="margin-top:0px; margin-bottom:opx;">
+						Category name: </br> <input type="text" class="textField">
+					</label>
+				</div>
+			<input type="button" class= "Button2" id="paymentButton" value="Delete method" />
+			
+		</form>
+		<div style=" margin-top: 30px; display:inline-block;">
+			<input type="button" class= "Button2" value="Save changes" />
+			<a href="settingsSite.html"> 
+				<button type="button" class= "Button2" >
+					<i class="icon-left-big"></i> Back
+				</button>
+			</a> 
+		</div>
+			
+		
+	</div>
+
+</body>
+</html>
