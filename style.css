@@ -170,15 +170,48 @@ textarea
 
 #balanceSheetTextField
 {
-	background-color: #F3F3FA;
+	/* background-color: #F3F3FA;
 	min-height: 100px;
 	font-size: 22px;
 	color: #1a8892;
 	border: 2px solid #333;
 	border-radius: 10px;
+	*/
 }
 
 #summaryField
 {
 	font-size: 18px;
+}
+
+
+table
+{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+td, th
+{
+	border: 2px solid #1a8892;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 10px;
+	font-size: 16px;
+	text-align: center;
+}
+
+th
+{
+	font-size: 18px;
+}
+
+#editList
+{
+	font-size: 18px;
+	background-color: #58C1D2;
+	color: white;
+	text-align: left;
+	font-family: 'Roboto Slab', serif;
+	width: 300px;
 }

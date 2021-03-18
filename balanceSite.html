@@ -12,9 +12,69 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
 	
+	<script>
+	var maxDay;
+	var year;
+	
+	function setTimeBorders()
+	{
+		var selectorValue = document.getElementById("timeBordersSelector").value;
+		var now = new Date();
+		var downBorder='2000-01-01';
+		var topBorder='2000-01-01';
+		var month = (now.getMonth() + 1);
+		year= now.getFullYear();
+		
+		switch(selectorValue)
+		{
+			case "Current month":
+				setMaxDay( month );
+				if (month < 10) month = '0' + month;
+				downBorder= year+'-'+month+'-01';
+				topBorder= year+'-'+month+'-'+maxDay;
+				break;
+			case "Previous month":
+				if( month != 1) month--;
+				else
+				{
+					month=12;
+					year--;
+				}
+				setMaxDay( month );
+				if (month < 10) month = '0' + month;
+				downBorder= year+'-'+month+'-01';
+				topBorder= year+'-'+month+'-'+maxDay;
+				break;
+			case "Current year":
+				downBorder=year + '-01-01';
+				topBorder=year + '-12-31';
+				break;
+			case "Custom":
+				break;
+		}
+		
+		document.getElementById("downDateBorder").value = downBorder;
+		document.getElementById("topDateBorder").value = topBorder;
+	}
+	
+	function setMaxDay( month )
+	{
+		if( month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
+		{
+			maxDay = 31;
+		}
+		else if( month  == 2 )
+		{
+			if(year%4 ==0) maxDay = 29;
+			else maxDay = 28;
+		}
+		else maxDay = 30;
+	}
+	</script>
+	
 </head>
 
-<body onload="setTimeToField()">
+<body onload="setTimeBorders()">
 	<header>
 		<h1 > Cash Assistant </h1>
 	</header>
@@ -23,19 +83,19 @@
 				<div class="formField" >
 					<label>
 						Time borders: <br/>
-						<select class="textField">
-							<option> Current month </option>
-							<option> Previos month</option>
-							<option> Current year </option>
-							<option> Custom </option>
+						<select class="textField", id="timeBordersSelector" onchange="setTimeBorders()">
+							<option>Current month</option>
+							<option>Previous month</option>
+							<option>Current year</option>
+							<option>Custom </option>
 						</select>
 					</label>
 				</div>
 				<div class="balanceSheetField">
-					Down border: <br/> <input type="date" class="textField" id="dateField" /> 
+					Down border: <br/> <input type="date" class="textField" id="downDateBorder" /> 
 				</div>
 				<div class="balanceSheetField" >
-					<label> Top border: <br/> <input type="date" class="textField" id="dateField" />  </label>
+					Top border: <br/> <input type="date" class="textField" id="topDateBorder" />
 				</div>
 				<div class="balanceSheetField" >
 					<button type="button" class= "Button2" >
@@ -44,8 +104,37 @@
 				</div>
 			</div>
 		<div id="balanceSheet">
-			Balance sheet: 
 			<div id="balanceSheetTextField">
+				Incomes:
+				<table>
+					<thead>
+						<th>Category</th> <th>Sum amount zł</th>
+					</thead>
+					<tr> 
+						<td>Category1</td> <td>10</td>
+					</tr>
+					<tr> 
+						<td>Category2</td> <td>100</td>
+					</tr>
+					<tr> 
+						<td>Category3</td> <td>1000</td>
+					</tr>
+				</table>
+				Expenses:
+				<table>
+					<thead>
+						<th>Category</th> <th>Sum amount zł</th>
+					</thead>
+					<tr> 
+						<td>Category1</td> <td>10</td>
+					</tr>
+					<tr> 
+						<td>Category2</td> <td>100</td>
+					</tr>
+					<tr> 
+						<td>Category3</td> <td>1000</td>
+					</tr>
+				</table>
 				
 			</div>
 			<div id="summaryField">
